@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="image-area" [id]="imageUniqueIdentifier" [style]="featureImageBuilder()"></div>
+    <div class="theme-name-area">{{themeName}}</div>
+    <div class="name-area">
+        <div class="avatar" [style]=avatarImageBuilder()></div>
+        <div class="name-and-company">
+            <p>{{nameOfPerson}}</p>
+            <p>{{nameOfCompany}}</p>
+        </div>
+    </div>
+    <app-button-yang [width]= "200" [uniqueIdentifier]="imageUniqueIdentifier" [buttonTitle]="cardButton"></app-button-yang>
+</div>
+
+<!-- style="background-image:url('/assets/images/card-images/card1.svg' )">test</div> -->

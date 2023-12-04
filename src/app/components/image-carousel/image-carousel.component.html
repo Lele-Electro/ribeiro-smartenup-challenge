@@ -3,13 +3,37 @@
     <button (click)="initializeSlideShowElements()">TEST button</button>
 </div> -->
 
-<div class="carousel">
-    <button class="carousel__button"></button>
-    <div class="carousel__track-container">
-        <ul class="carousel__track">
-            <li class="carousel__slide" alt=""><img class="carousel__image" src="/assets/images/carousel-images/slide (1).png"></li>
-            <li class="carousel__slide" alt=""><img class="carousel__image" src="/assets/images/carousel-images/slide (2).png"></li>
-            <li class="carousel__slide" alt=""><img class="carousel__image" src="/assets/images/carousel-images/slide (3).png"></li>
+
+
+        <!-- <ul class="carousel__track " [ngClass]="{'dangling-carousel': danglingMode}"id="track">
+            <li class="carousel__slide slide-2"
+                (mouseover)="danglingMode = false"
+                (mouseleave)="danglingMode = true"
+                [ngClass]="{'expanded-slide': !danglingMode}">
+                <img class="carousel__image" src="/assets/images/carousel-images/slide (2).png">
+            </li>
+
+            <li   (mouseover)="danglingMode = false"
+            (mouseleave)="danglingMode = true"
+
+            class="carousel__slide slide-1" > <img class="carousel__image" src="/assets/images/carousel-images/slide (1).png"> </li>
+            <li   (mouseover)="danglingMode = false"
+            (mouseleave)="danglingMode = true"class="carousel__slide slide-3" > <img class="carousel__image" src="/assets/images/carousel-images/slide (3).png"> </li>
+        </ul> -->
+
+        <ul class="carousel__track "
+        [ngClass]="{'dangling-carousel': danglingMode}"id="track">
+            <li *ngFor="let image of imagesByRelativePath; let i = index"
+                class="carousel__slide"
+                (mouseover)="expandSlide(i)"
+                (mouseleave)="collapseSlide(i)"
+                [ngClass]="{'expanded-slide': image.expand}">
+                <img class="carousel__image" [src]= image.source>
+            </li>
+
         </ul>
-    </div>
-</div>
+
+
+
+
+<!-- <button (click)="initializeSlideShowElements()"> TEST BUTTON</button> -->

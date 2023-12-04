@@ -1,6 +1,74 @@
 @import './../../../styles.scss';
+:host{
+    background-image: url('/assets/images/footer-image.png');
+    // background-position-x:-500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    color: white;
+
+}
+
+
 .section-container{
-    height: 100vh;
-    // width: 100vw;
-    background-color: $primary-color;
+
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 70px 70px;
+
+
+    .top-section{
+        // background-color: tomato;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    .mid-section{
+        // background-color: seagreen;
+        display: grid;
+        grid-template-columns: 150px 150px 150px 150px 150px;
+        column-gap: 25px;
+    }
+
+    .sub-section{
+        // background-color: goldenrod;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    :host{
+        background-image: url('/assets/images/footer-image.png');
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        color: white;
+
+    }
+
+
+    .section-container{
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 50px;
+
+        .top-section{display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+
+    .mid-section{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+
+
+
+    }
+
+
 }
