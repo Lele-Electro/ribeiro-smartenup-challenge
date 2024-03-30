@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './landing-section.component.html',
   styleUrls: ['./landing-section.component.scss']
 })
-export class LandingSectionComponent {
 
+
+export class LandingSectionComponent {
+bannerWords: string[] = ['Gaming spaning','Action packed', 'mind bending', 'collection of games']
 }

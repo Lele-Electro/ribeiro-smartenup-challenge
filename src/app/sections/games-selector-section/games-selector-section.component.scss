@@ -1,7 +1,21 @@
 @import './../../../styles.scss';
-
-.section-container{
-    height: 100vh;
-    // width: 100vw;
+:host{
     background-color: $primary-color;
+    height: 100%;
+}
+.section-container{
+    // margin-top: -15px;
+    // height: 100dvh;
+    // width: 100vw;
+
+}
+
+.text-container{
+    // position: absolute;
+    margin-top: 90px;
+    text-align: center;
+    padding-left: 250px;
+    padding-right:250px;
+    margin: o;
+
 }

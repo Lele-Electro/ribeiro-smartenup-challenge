@@ -1,0 +1,27 @@
+@import './../../../styles.scss';
+
+.button{
+    background: $gradient-90;
+    font-family: lato-font-regular;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    // -moz-clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+    // clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+    transition: 100ms ease-in-out;
+    p{
+        align-self: center;
+        font-family: lato-font-regular !important;
+        text-transform: uppercase;
+        color: white;
+    }
+    &:hover{
+        background: $gradient-180;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+}

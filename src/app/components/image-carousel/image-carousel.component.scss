@@ -1,30 +1,108 @@
-.carousel {
-    position: relative;
-    height:  600px;
-    width: 80%;
-    margin: 0 auto;
-}
-.carousel__image{
-    // width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+@import '/src/styles.scss';
 
-.carousel__track-container{
-    background-color: lightgreen;
-    height: 100%;
-    position: relative;
-}
+// .carousel {
+//     position: relative;
+//     height:  300px;
+//     // width: 80%;
+//     margin: 0 auto;
+//     overflow: hidden;
+// }
+
+// .carousel__track-container{
+//     background-color: lightgreen;
+//     height: 100%;
+//     position: relative;
+// }
+
+// .carousel__track{
+//     padding: 0;
+//     margin: 0;
+//     list-style: none;
+// }
+
+// .carousel__slide{
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     width: 500px;
+//     overflow: hidden;
+//     margin-right: 50px important;
+
+
+//     .carousel__image{
+//         width: 100%;
+
+//     }
+
+
+// .carousel__track{
+
+//     padding: 0;
+//     margin: 0;
+//     list-style: none;
+//     display: grid;
+//     height: 300px;
+//     transition: 1s ease-in-out;
+//     grid-template-columns: repeat(3, 1fr);
+//     // animation: moveLeft 6s ease-in-out infinite alternate;
+
+
+//     li{
+
+//         overflow: hidden;
+
+
+//     }
+// }
 
 .carousel__track{
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    // background-color: burlywood;
+    height: 100%;
+    display: flex;
+    justify-content:  center  ;
+    transition: 950ms ease-in;
+
+    li{
+        width: 300px;
+        height: 300px;
+        float:left;
+        margin-right: 50px;
+        cursor: pointer;
+        object-fit: cover;
+        overflow: hidden;
+        transition: 250ms ease-in;
+
+    }
+}
+.dangling-carousel{
+    // animation: moveLeft 3s ease-in-out infinite alternate;
+    // transform: translateX(0px) !important;
+    transition: 950ms ease-in !important;
+    justify-content: center;
 }
 
-.carousel__slide{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%
+.expanded-slide{
+    width: 500px !important;
+    background-color: $secondary-color;
+    outline: 8px solid $secondary-color;
+    background-size: 120%;
+    // background: linear-gradient(to right, red, purple);
+
+    .expanded-slide::before{
+        content: 'test';
+        position: relative;
+
+    }
+}
+
+
+
+@keyframes moveLeft {
+
+0%{
+    transform: translateX(-100px);
+}
+100%{
+    transform: translateX(100px);
+}
 }

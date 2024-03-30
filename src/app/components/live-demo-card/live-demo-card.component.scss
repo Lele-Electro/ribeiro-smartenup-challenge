@@ -1,0 +1,110 @@
+@import './../../../styles.scss';
+.card{
+    display: grid;
+    font-family: 'lato-font-regular';
+    color: white;
+    @include frost;
+    width: 330px;
+    height: 500px;
+    padding: 10px;
+    grid-template-rows: 1fr 30px 70px 70px;
+    @include chosenBorderRadius();
+    row-gap: 7px;
+    // justify-content: felx;
+
+
+    .image-area{
+        height: 100%;
+        width: 100% !important;
+        background-size: cover;
+        background-position: center;
+        @include chosenBorderRadius();
+
+    }
+    .theme-name-area{
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+
+    .name-area{
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        height: 50px;
+
+        .avatar{
+            // height: 100% ;
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .name-and-company{
+            align-self: center;
+            p{
+                padding: 0;
+                margin: 0;
+                font-family: 'lato-font-regular' !important;
+            }
+            p:nth-of-type(1){
+            }
+            p:nth-of-type(2){
+                font-size: 10px;
+            }
+        }
+
+    }
+
+    app-button-yang {
+        // justify-self: center;
+        // width: 100%;
+    }
+
+
+
+}
+@media only screen and (max-width: 600px) {
+
+
+        .card{
+            // width: 80% !important;
+            // height: 100%;
+            // justify-self:
+            margin-left: 25px ;
+        }
+
+        .theme-name-area{
+            text-transform: capitalize;
+            font-size: 16px;
+        }
+
+        .name-area{
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            height: 50px;
+
+            .avatar{
+                // height: 100% ;
+                width: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .name-and-company{
+                align-self: center;
+                p{
+                    padding: 0;
+                    margin: 0;
+                    font-family: 'lato-font-regular' !important;
+                }
+                p:nth-of-type(1){
+                    font-size: 10px;
+                }
+                p:nth-of-type(2){
+                    font-size: 10px;
+                }
+            }
+
+}
+}
+
+

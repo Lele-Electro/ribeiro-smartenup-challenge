@@ -1,7 +1,64 @@
 @import './../../../styles.scss';
 
-.section-container{
-    height: 100vh;
+:host{
+    height: 200%;
+    width: 100%;
     // width: 100vw;
     background-color: $primary-color;
+    display: block;
+}
+
+.section-container{
+
+
+}
+.text-container{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.buttons-container{
+    margin-top: 50px;
+    display: flex;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center
+}
+
+.cards-container{
+    // width: 100%;
+    display: grid;
+    padding: 45px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 25px;
+    row-gap: 45px;
+    app-live-demo-card{
+        justify-self: center;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .text-container{
+        display: none;
+    }
+    .buttons-container{
+        display: none;
+    }
+    .cards-container{
+
+        // padding: 60px;
+        // padding-left: 200px ;
+        // padding-right: 200px ;
+        grid-template-columns: 1fr;
+        padding: 5px;
+        // grid-template-rows: 1fr;
+    app-live-demo-card{
+        // justify-self: unset;
+    }
+
+
+    }
+
+
 }

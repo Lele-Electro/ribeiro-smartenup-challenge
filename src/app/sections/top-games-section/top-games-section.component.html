@@ -1,5 +1,31 @@
+<div class="section-container">
 
-<div class = "section-container">
-    top games section
+    <div class="text-container">
+        <h1>Welcome to the</h1>
+        <h1>top <span>games</span></h1>
+    </div>
+
+    <div class="buttons-container">
+        <app-button-yang [buttonTitle]="'Newest Games'"></app-button-yang>
+        <app-button-yin [buttonTitle]="'Latest Games'" [width]="200" uniqueIdentifier="lgames"></app-button-yin>
+        <app-button-yin [buttonTitle]="'Fight Games'" [width]="200" uniqueIdentifier="fgames"></app-button-yin>
+        <app-button-yin [buttonTitle]="'Sport Games'" [width]="200" uniqueIdentifier="sgames"></app-button-yin>
+    </div>
+
+    <div class="cards-container">
+    <app-live-demo-card *ngFor="let data of cardData"
+        [cardButton]= data.cardButton
+        [imageUniqueIdentifier] = data.id
+        [featureImageSource]= data.featureImageSource
+        [avatarImageSource]= data.avatarImageSource
+        [themeName]= data.themeName
+        [nameOfPerson]= data.nameOfPerson
+        [nameOfCompany]= data.nameOfCompany >
+    </app-live-demo-card>
+    <!-- <app-text-banner></app-text-banner> -->
+
+
+    </div>
+
 </div>
-
+<app-text-banner [words]="bannerWords" [sizing]="600" [bannerShift]="90" [degrees]="2" uniqueIdentifier="bannerTopGamesSection"></app-text-banner>

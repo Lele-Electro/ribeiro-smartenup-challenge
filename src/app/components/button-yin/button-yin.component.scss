@@ -1,0 +1,24 @@
+@import './../../../styles.scss';
+
+.button{
+    font-family: lato-font-regular;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: 100ms ease-in-out;
+    background-image: url('/assets/images/button-parrallelogram.svg');
+    height: 60px;
+    // max-height: 200px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    p{
+        align-self: center;
+        justify-self: center;
+        font-family: lato-font-regular !important;
+        text-transform: uppercase;
+        color: white;
+    }
+
+}

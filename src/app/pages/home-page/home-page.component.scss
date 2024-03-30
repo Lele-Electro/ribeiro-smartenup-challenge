@@ -1,0 +1,10 @@
+:host{
+    display: grid;
+    grid-template-rows:
+    2fr //landing-section
+    2fr //favourite games section
+    2fr // Virtual Reality Section
+    3fr // Top Games Section
+    2fr //Testimonials Section
+    1fr; //Footer Section
+}

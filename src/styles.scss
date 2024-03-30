@@ -1,11 +1,94 @@
+// @import url('/src/fonts/lato-font/Lato-Regular.ttf');
+
+@font-face{
+    font-family: "ondo-font-italic";
+    src: url('/assets/fonts/ondo-font/FONTSPRINGDEMO-OndoItalic.ttf') format("truetype");
+}
+
+
+@font-face{
+    font-family: "ondo-font-regular";
+    src: url('/assets/fonts/ondo-font/FONTSPRINGDEMO-OndoRegular.ttf') format("truetype");
+}
+
+@font-face{
+    font-family: "lato-font-regular";
+    src: url('/assets/fonts/lato-font/Lato-Regular.ttf') format("truetype");
+}
+
+
+
+@mixin chosenBorderRadius {
+    border-radius: 15px;
+}
+
+
+@mixin frost {
+    backdrop-filter: blur(5px);
+    background: radial-gradient(rgba(255, 255, 255, 0.144) 30%, rgba(255, 255, 255, 0.233));
+}
+@mixin horizontalSectionPadding{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 $primary-color: #2D1E6B;
 $secondary-color: #DD00B8;
+$ondo-font-italic: 'ondo-font-italic';
+$ondo-font-regular: 'ondo-font-regular';
+$frosted-pane:frost;
+$gradient-90:linear-gradient(90deg,  #6542F4 43.84%, #F976FF 68.39%, #B50098 91.97%);
+$gradient-180:linear-gradient(-90deg,  #6542F4 43.84%, #F976FF 68.39%, #B50098 91.97%);
+
+
+.section-padding{
+    @include horizontalSectionPadding;
+}
+
+
+h1{
+    font-size:  50.937px !important;
+    color: #FFFFFF;
+    font-family: $ondo-font-regular;
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+
+    span{
+        color: #fcff00;
+        background: linear-gradient(90deg,  #6542F4 43.84%, #F976FF 68.39%, #B50098 91.97%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+h2{
+    font-family: 'ondo-font-regular';
+}
+
 .section-container{
     // padding-left: 40px;
     // padding-right: 40px;
 }
 
+
 body{
     padding: 0px;
     margin:  0px;
+
 }
+p{
+
+    font-family: 'lato-font-regular';
+}
+
+.text-banner-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
